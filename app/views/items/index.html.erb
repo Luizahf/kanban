@@ -1,28 +1,14 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Items</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <td><%= item.status %></td>
-        <td><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<tbody>
+  <h1> TO DO </h1>
+  <%= render 'item', status: 'todo' %>
+  <h1> DOING </h1>
+  <%= render 'item', status: 'doing' %>
+  <h1> DONE </h1>
+  <%= render 'item', status: 'done' %>
+  
+</tbody>
 
 <br>
 

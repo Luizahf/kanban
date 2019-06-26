@@ -7,10 +7,11 @@
     <%= render 'item', status: 'doing' %>
     <h1> DONE </h1>
     <%= render 'item', status: 'done' %>
+    
+    <br>
+    <%= link_to fa_icon('plus solid'), new_item_path, class: 'add' %>
   </div>
   
-  <br>
-  <%= link_to 'New Item', new_item_path %>
 </tbody>
 
 

@@ -1,9 +1,27 @@
 @import "bootstrap";
-
+@import "font-awesome";
 body {
     background: image-url('landscape.jpg') no-repeat;
 }
 
 .main {
     background-color: rgba(255, 255, 255, 0.692);
+}
+
+.card-link a {
+    font-size: 20px;
+    margin-right: 12px;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: grey;
+}
+
+.add {
+    font-size: 40px;
+    color: rgb(59, 59, 59);
+}
+
+.title {
+    font-size: 27px;
+    color: rgb(65, 65, 65);
 }

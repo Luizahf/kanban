@@ -1,15 +1,16 @@
-<h1>Items</h1>
-
 <tbody>
-  <h1> TO DO </h1>
-  <%= render 'item', status: 'todo' %>
-  <h1> DOING </h1>
-  <%= render 'item', status: 'doing' %>
-  <h1> DONE </h1>
-  <%= render 'item', status: 'done' %>
+
+  <div class="main">
+    <h1> TO DO </h1>
+    <%= render 'item', status: 'todo' %>
+    <h1> DOING </h1>
+    <%= render 'item', status: 'doing' %>
+    <h1> DONE </h1>
+    <%= render 'item', status: 'done' %>
+  </div>
   
+  <br>
+  <%= link_to 'New Item', new_item_path %>
 </tbody>
 
-<br>
 
-<%= link_to 'New Item', new_item_path %>

@@ -1,8 +1,14 @@
 <% @items.each do |item| %>
     <% if item.status == status %>
-        <%= item.description %>
-        <%= link_to 'Show', item %>
-        <%= link_to 'Edit', edit_item_path(item) %>
-        <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= item.description %> title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link"><%= link_to 'Show', item %></a>
+                <a href="#" class="card-link"><%= link_to 'Edit', edit_item_path(item) %></a>
+                <a href="#" class="card-link"><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+            </div>
+        </div>        
     <% end %>
 <% end %>
+

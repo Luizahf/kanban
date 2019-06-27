@@ -1,15 +1,21 @@
 <tbody>
 
-  <div class="main">
-    <h1> TO DO </h1>
-    <%= render 'item', status: 'todo' %>
-    <h1> DOING </h1>
-    <%= render 'item', status: 'doing' %>
-    <h1> DONE </h1>
-    <%= render 'item', status: 'done' %>
+  <div class="main .container row">
+    <div class="col-sm-4">
+      <h1> TO DO </h1>
+      <%= render 'item', status: 'todo' %>
+    </div>
+    <div class="col-sm-4">
+      <h1> DOING </h1>
+      <%= render 'item', status: 'doing' %>
+    </div>
+    <div class="col-sm-4">
+      <h1> DONE </h1>
+      <%= render 'item', status: 'done' %>
+    </div>
     
     <br>
-    <%= link_to fa_icon('plus solid'), new_item_path, class: 'add' %>
+    <%= link_to fa_icon('plus solid'), new_item_path, class: 'add'%>
   </div>
   
 </tbody>

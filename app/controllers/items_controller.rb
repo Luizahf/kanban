@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :set_item, only: [:show, :edit, :update, :destroy, :moveR, :moveL]
 
   # GET /items
   # GET /items.json
@@ -42,7 +42,7 @@ class ItemsController < ApplicationController
   def update
     respond_to do |format|
       if @item.update(item_params)
-        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.html { redirect_to items_url, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
         format.html { render :edit }
@@ -59,6 +59,24 @@ class ItemsController < ApplicationController
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def moveR
+    if @item.status == 'todo'
+      @item.update(status: 'doing')
+    elsif @item.status == 'doing'
+      @item.update(status: 'done')
+    end
+      redirect_to items_url
+    end
+    
+  def moveL
+    if @item.status == 'done'
+      @item.update(status: 'doing')
+    elsif @item.status == 'doing'
+      @item.update(status: 'todo')
+    end    
+    redirect_to items_url
   end
 
   private

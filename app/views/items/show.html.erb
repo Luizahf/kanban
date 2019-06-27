@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @item.status %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<div class="main 2">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <strong>Description:</strong>
+      <%= @item.description %>
+      <div class="card-link">
+        <%= link_to fa_icon('edit solid'), edit_item_path(@item) %>
+        <%= link_to fa_icon('caret-left solid'), items_path %>
+      </div>
+    </div>
+  </div>        
+</div>

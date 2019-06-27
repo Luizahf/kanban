@@ -6,6 +6,14 @@
                 <div class="card-link">
                     <%= link_to fa_icon('edit solid'), edit_item_path(item) %>
                     <%= link_to fa_icon('trash solid'), item, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    <% if status == 'todo' %>
+                        <%= link_to fa_icon('caret-right solid'),  moveR_item_path(item), method: :put %>
+                    <% elsif status == 'doing' %>
+                        <%= link_to fa_icon('caret-left solid'), moveL_item_path(item), method: :put %>
+                        <%= link_to fa_icon('caret-right solid'),  moveR_item_path(item), method: :put %>
+                    <% else %>
+                        <%= link_to fa_icon('caret-left solid'), moveL_item_path(item), method: :put %>
+                    <% end %>
                 </div>
             </div>
         </div>        

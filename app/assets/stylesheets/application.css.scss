@@ -5,7 +5,13 @@ body {
 }
 
 .main {
-    background-color: rgba(255, 255, 255, 0.692);
+    background-color: rgba(255, 255, 255, 0.87);
+    padding: 20px;
+    margin-top: 20%;
+}
+
+h1 {
+    text-align: center;
 }
 
 .card-link a {
@@ -19,6 +25,14 @@ body {
 .add {
     font-size: 40px;
     color: rgb(59, 59, 59);
+    margin-left: 20px;
+}
+
+.big {
+    font-size: 40px;
+    margin-right: 40px;
+    margin-left: 5px;
+    margin-top: 5px;
 }
 
 .title {
